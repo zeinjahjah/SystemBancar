@@ -291,8 +291,6 @@ public class Balance extends JFrame {
 					+ "from customer c, account a" + " where c.cust_id = a.cust_id and a.acc_id = ? and c.cust_id=?");
 			insert.setString(1, accno);
 			insert.setString(2, this.customer_id);
-			System.out.println(accno);
-			System.out.println(this.customer_id);
 			rs1 = insert.executeQuery();
 
 			if (rs1.next() == false) {

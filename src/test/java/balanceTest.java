@@ -19,7 +19,7 @@ public class balanceTest {
 		
 		
 		// account side
-		Account a = new Account(cust_id, "test test");
+		Account a = new Account("user", cust_id, "test test");
 		String acc_id = a.autoId();
 		a.setAccount(acc_id, "2400");
 		a.addAccount(true);

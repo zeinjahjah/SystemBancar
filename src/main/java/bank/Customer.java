@@ -37,7 +37,16 @@ public class Customer extends JFrame {
 		autoId();
 
 	}
+	
+	public Customer(String role, String customer_id, String customer_name) {
+		this.role = role;
+		this.customer_id = customer_id;
+		this.customer_name = customer_name;
+		initComponents();
+		autoId();
 
+	}
+	
 	Connection con1;
 	PreparedStatement insert;
 
@@ -368,6 +377,25 @@ public class Customer extends JFrame {
 			insert.setString(3, id);
 			insert.setString(4, "user");
 			insert.executeUpdate();
+
+			
+			String val1 = ""+((int)(Math.random()*9000)+1000);
+			String val2 = ""+((int)(Math.random()*9000)+1000);
+			String val3 = ""+((int)(Math.random()*9000)+1000);
+			String val4 = ""+((int)(Math.random()*9000)+1000);
+			String Iban = val1 + ' ' + val2 + ' '+ val3 + ' '+ val4;
+            String cvv = ""+((int)(Math.random()* 800)+100);
+            String date = "0" + ""+((int)(Math.random()* 8)+1) + "/" +  ""+((int)(Math.random()* 4)+2022);
+            
+			insert = con1.prepareStatement("insert into virtual_cards(iban, data, cvv, cust_id) values (?,?,?,?)");
+			insert.setString(1, Iban);
+			insert.setString(2, date);
+			insert.setString(3, cvv);
+			insert.setString(4, id);
+			insert.executeUpdate();
+			
+			
+			insert.executeUpdate();
 			if (!test) {
 				JOptionPane.showMessageDialog(this, "Sucsessfully Saved");
 			}
@@ -503,4 +531,6 @@ public class Customer extends JFrame {
 	private JTextField textMail;
 	private JTextField textUserName;
 	private JTextField textPassword;
+	private String customer_id;
+	private String customer_name;
 }

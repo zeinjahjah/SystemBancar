@@ -28,6 +28,17 @@ public class CustomerReport extends JFrame {
 		table_update();
 	}
 
+	
+	public CustomerReport(String role, String customer_id, String customer_name) {
+		this.role = role;
+		this.customer_id = customer_id;
+		this.customer_name = customer_name;
+		initComponents();
+		table_update();
+	}
+	
+
+	
 	Connection con1;
 	PreparedStatement insert;
 

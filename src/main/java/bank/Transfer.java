@@ -15,6 +15,11 @@ import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JLabel;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Font;
 
 /**
  *
@@ -105,85 +110,83 @@ public class Transfer extends JFrame {
 				jButton4ActionPerformed(evt);
 			}
 		});
+		
+		JLabel lblAccountCurrency = new JLabel();
+		lblAccountCurrency.setText("Account Currency");
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD, 13));
 
 		javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+		jPanel1Layout.setHorizontalGroup(
+			jPanel1Layout.createParallelGroup(Alignment.LEADING)
+				.addGroup(jPanel1Layout.createSequentialGroup()
+					.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+						.addGroup(jPanel1Layout.createSequentialGroup()
+							.addGap(32)
+							.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+								.addGroup(jPanel1Layout.createSequentialGroup()
+									.addComponent(jLabel7)
+									.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(fano, GroupLayout.PREFERRED_SIZE, 209, GroupLayout.PREFERRED_SIZE)
+									.addGap(2))
+								.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+									.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+										.addComponent(jLabel2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+										.addComponent(jLabel1)
+										.addGroup(jPanel1Layout.createSequentialGroup()
+											.addComponent(lblAccountCurrency)
+											.addPreferredGap(ComponentPlacement.RELATED)))
+									.addGap(18)
+									.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+										.addComponent(txtbal, GroupLayout.PREFERRED_SIZE, 207, GroupLayout.PREFERRED_SIZE)
+										.addComponent(lblNewLabel)
+										.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
+											.addComponent(txtamount, GroupLayout.PREFERRED_SIZE, 209, GroupLayout.PREFERRED_SIZE)
+											.addComponent(toano, GroupLayout.PREFERRED_SIZE, 209, GroupLayout.PREFERRED_SIZE))))))
+						.addGroup(jPanel1Layout.createSequentialGroup()
+							.addGap(41)
+							.addComponent(jLabel5)))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING, false)
+						.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
+						.addComponent(jButton4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addComponent(jButton3, GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))
+					.addContainerGap(36, Short.MAX_VALUE))
+		);
+		jPanel1Layout.setVerticalGroup(
+			jPanel1Layout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(jPanel1Layout.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(fano, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(jLabel7)
+						.addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
+					.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+						.addGroup(jPanel1Layout.createSequentialGroup()
+							.addGap(6)
+							.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(lblAccountCurrency)
+								.addComponent(lblNewLabel))
+							.addGap(14)
+							.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(jLabel1)
+								.addComponent(txtbal, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addGap(29)
+							.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(jLabel2)
+								.addComponent(toano, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+						.addGroup(jPanel1Layout.createSequentialGroup()
+							.addGap(30)
+							.addComponent(jButton3, GroupLayout.PREFERRED_SIZE, 70, GroupLayout.PREFERRED_SIZE)))
+					.addGap(24)
+					.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(jLabel5)
+						.addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+						.addComponent(txtamount, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addContainerGap(74, Short.MAX_VALUE))
+		);
 		jPanel1.setLayout(jPanel1Layout);
-		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(jPanel1Layout.createSequentialGroup().addGroup(jPanel1Layout
-						.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-								.addGroup(javax.swing.GroupLayout.Alignment.LEADING,
-										jPanel1Layout.createSequentialGroup().addGap(152, 152, 152).addComponent(
-												txtamount, javax.swing.GroupLayout.PREFERRED_SIZE, 209,
-												javax.swing.GroupLayout.PREFERRED_SIZE))
-								.addGroup(javax.swing.GroupLayout.Alignment.LEADING,
-										jPanel1Layout.createSequentialGroup().addGap(32, 32, 32).addGroup(jPanel1Layout
-												.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-												.addGroup(jPanel1Layout.createSequentialGroup().addGroup(jPanel1Layout
-														.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-														.addComponent(jLabel2).addComponent(jLabel1))
-														.addPreferredGap(
-																javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-																javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-														.addGroup(jPanel1Layout
-																.createParallelGroup(
-																		javax.swing.GroupLayout.Alignment.LEADING)
-																.addComponent(txtbal,
-																		javax.swing.GroupLayout.PREFERRED_SIZE, 207,
-																		javax.swing.GroupLayout.PREFERRED_SIZE)
-																.addComponent(toano,
-																		javax.swing.GroupLayout.PREFERRED_SIZE, 209,
-																		javax.swing.GroupLayout.PREFERRED_SIZE)))
-												.addGroup(jPanel1Layout.createSequentialGroup().addComponent(jLabel7)
-														.addPreferredGap(
-																javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-																javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-														.addComponent(fano, javax.swing.GroupLayout.PREFERRED_SIZE, 209,
-																javax.swing.GroupLayout.PREFERRED_SIZE)
-														.addGap(2, 2, 2)))))
-						.addGroup(jPanel1Layout.createSequentialGroup().addGap(41, 41, 41).addComponent(jLabel5)))
-						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-						.addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-								.addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 96,
-										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE,
-										javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))
-						.addContainerGap(44, Short.MAX_VALUE)));
-		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-						.addContainerGap()
-						.addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(fano, javax.swing.GroupLayout.PREFERRED_SIZE,
-										javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addComponent(jLabel7).addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE,
-										40, javax.swing.GroupLayout.PREFERRED_SIZE))
-						.addGroup(
-								jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-										.addGroup(jPanel1Layout.createSequentialGroup().addGap(36, 36, 36)
-												.addGroup(jPanel1Layout
-														.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel1).addComponent(txtbal,
-																javax.swing.GroupLayout.PREFERRED_SIZE,
-																javax.swing.GroupLayout.DEFAULT_SIZE,
-																javax.swing.GroupLayout.PREFERRED_SIZE))
-												.addGap(29, 29, 29)
-												.addGroup(jPanel1Layout
-														.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-														.addComponent(jLabel2).addComponent(toano,
-																javax.swing.GroupLayout.PREFERRED_SIZE,
-																javax.swing.GroupLayout.DEFAULT_SIZE,
-																javax.swing.GroupLayout.PREFERRED_SIZE)))
-										.addGroup(jPanel1Layout.createSequentialGroup().addGap(30, 30, 30).addComponent(
-												jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70,
-												javax.swing.GroupLayout.PREFERRED_SIZE)))
-						.addGap(24, 24, 24)
-						.addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(txtamount, javax.swing.GroupLayout.PREFERRED_SIZE,
-										javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addComponent(jLabel5).addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE,
-										45, javax.swing.GroupLayout.PREFERRED_SIZE))
-						.addContainerGap(82, Short.MAX_VALUE)));
 
 		getContentPane().add(jPanel1);
 		jPanel1.setBounds(17, 55, 530, 330);
@@ -214,10 +217,10 @@ public class Transfer extends JFrame {
 		try {
 			DB_Connector connector = new DB_Connector();
 			con1 = connector.getConnection();
-
 			insert = con1.prepareStatement(
-					"select balance from customer,account where customer.cust_id = account.cust_id and account.acc_id = ?");
+					"select balance, acc_type from customer,account where customer.cust_id = account.cust_id and account.acc_id = ? and customer.cust_id=?");
 			insert.setString(1, accno);
+			insert.setString(2, this.customer_id);
 			rs1 = insert.executeQuery();
 
 			if (rs1.next() == false) {
@@ -228,8 +231,10 @@ public class Transfer extends JFrame {
 			else {
 
 				String balance = rs1.getString(1);
+				String type = rs1.getString(2);
+				this.fromAccountType = type;
 				txtbal.setText(balance.trim());
-
+				lblNewLabel.setText(type);
 			}
 
 		} catch (SQLException ex) {
@@ -244,7 +249,6 @@ public class Transfer extends JFrame {
 	 * @param evt ActionEvent when clicking on Home button
 	 */
 	private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {
-
 		MainMenu c = new MainMenu(this.role, this.customer_id, this.customer_name);
 		c.permissions(this.role);
 		this.hide();
@@ -252,6 +256,70 @@ public class Transfer extends JFrame {
 
 	}
 
+	/**
+	 * Calculate the exchange amount based on account type
+	 * 
+	 * @param Double amount Amount that will be exchanged
+	 * @param String toAccount the receiver account 
+	 */
+	private Double calculateAmount(Double amount, String toAccount) {
+		
+		
+		try {
+			DB_Connector connector = new DB_Connector();
+			con1 = connector.getConnection();
+
+			insert = con1.prepareStatement(
+					"select acc_type from account where account.acc_id=?");
+			insert.setString(1, toAccount);
+			rs1 = insert.executeQuery();
+
+			if (rs1.next() == false) {
+				JOptionPane.showMessageDialog(null, "Account No no found");
+
+			}
+
+			else {
+				String ToAccountType = rs1.getString(1);
+
+				if (this.fromAccountType.contains("Lei")  && ToAccountType.contains("Dollar")) {
+					return amount/this.dollarRate;
+				}
+				
+				if (this.fromAccountType.contains("Lei")  && ToAccountType.contains("Euro")) {
+					return amount/this.euroRate;
+				}
+				
+				
+				if (this.fromAccountType.contains("Euro")  && ToAccountType.contains("Dollar")) {
+					return amount*1.2;
+				}
+				
+				
+				if (this.fromAccountType.contains("Euro")  && ToAccountType.contains("Lei")) {
+					return amount*this.euroRate;
+				}
+				
+				
+				if (this.fromAccountType.contains("Dollar")  && ToAccountType.contains("Euro")) {
+					return amount/1.2;
+				}
+				
+				
+				if (this.fromAccountType.contains("Dollar")  && ToAccountType.contains("Lei")) {
+					return amount*this.dollarRate;
+				}
+				
+				
+			}
+
+		} catch (SQLException ex) {
+			System.out.println("Failed " + ex);
+		}
+		return amount;
+		
+	}
+	
 	/**
 	 * Transfer button functionality which transfer money to another account
 	 * 
@@ -266,6 +334,8 @@ public class Transfer extends JFrame {
 			Double amount = Double.parseDouble(txtamount.getText().trim());
 
 			if (amount <= balance) {
+				Double To_amount = calculateAmount(amount, taccno);
+				
 				DB_Connector connector = new DB_Connector();
 				con1 = connector.getConnection();
 
@@ -275,16 +345,17 @@ public class Transfer extends JFrame {
 				st1.executeUpdate();
 
 				PreparedStatement st2 = con1.prepareStatement("update account set balance=balance+? where acc_id=?");
-				st2.setDouble(1, amount);
+				st2.setDouble(1, To_amount);
 				st2.setString(2, taccno);
 				st2.executeUpdate();
 
 				PreparedStatement st3 = con1
-						.prepareStatement("insert into transfer(f_account,to_account,amount, date) values(?,?,?,?)");
+						.prepareStatement("insert into transfer(f_account,to_account,amount, currency,date) values(?,?,?,?,?)");
 				st3.setString(1, faccno);
 				st3.setString(2, taccno);
 				st3.setDouble(3, amount);
-				st3.setString(4, date());
+				st3.setString(4, this.fromAccountType);
+				st3.setString(5, date());
 				st3.executeUpdate();
 				JOptionPane.showMessageDialog(this, "Amount Transfer...!!!!!!!");
 
@@ -292,6 +363,8 @@ public class Transfer extends JFrame {
 				toano.setText("");
 				txtamount.setText("");
 				txtbal.setText("");
+				lblNewLabel.setText("");
+
 
 			} else {
 				JOptionPane.showMessageDialog(this, "Not enough balance");
@@ -377,5 +450,8 @@ public class Transfer extends JFrame {
 	private Connection con1;
 	private PreparedStatement insert;
 	private ResultSet rs1;
-	// End of variables declaration
+	private JLabel lblNewLabel;
+	private String fromAccountType = "";
+	private Integer dollarRate = 4;
+	private Integer euroRate = 4;
 }
